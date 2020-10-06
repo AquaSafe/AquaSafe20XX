@@ -1,5 +1,5 @@
 {
-  "name": "AquaSafe20XX",
+  "name": "aquasafe20xx",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-native": "0.63.3"
+    "react-native": "0.63.3",
+    "react-native-unimodules": "^0.11.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
