@@ -22,10 +22,6 @@ matrix:
         - brew tap wix/brew
         - brew install applesimutils
       script:
-        - yarn install
-        - yarn test
-        - cd ios
-        - pod install
         - cd ..
         - detox build --configuration ios.sim.release
         - detox test --configuration ios.sim.release --cleanup
