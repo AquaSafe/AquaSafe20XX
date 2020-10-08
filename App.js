@@ -12,8 +12,12 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+
+  StatusBar,
+  Animated,
+  Button,
   TouchableOpacity,
-  View,
+  Alert,
 } from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
@@ -75,6 +79,7 @@ const App = () /*=> React$Node = ()*/ => {
               }}>
               AquaSafe
             </Animated.Text>
+
           </View>
           <View style={styles.textBlock}>
             <Animated.View
@@ -89,6 +94,7 @@ const App = () /*=> React$Node = ()*/ => {
               </TouchableOpacity>
             </Animated.View>
           </View>
+
         </View>
       </>
     );
