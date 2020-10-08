@@ -6,13 +6,13 @@
  * @flow strict-local
  */
 import 'react-native-gesture-handler';
-import React, {useRef, useEffect} from 'react';
+import React, {useRef} from 'react';
 import {
-  SafeAreaView,
+  Animated,
+  StatusBar,
   StyleSheet,
-  ScrollView,
-  View,
   Text,
+
   StatusBar,
   Animated,
   Button,
@@ -79,6 +79,7 @@ const App = () /*=> React$Node = ()*/ => {
               }}>
               AquaSafe
             </Animated.Text>
+
           </View>
           <View style={styles.textBlock}>
             <Animated.View
@@ -93,6 +94,7 @@ const App = () /*=> React$Node = ()*/ => {
               </TouchableOpacity>
             </Animated.View>
           </View>
+
         </View>
       </>
     );
