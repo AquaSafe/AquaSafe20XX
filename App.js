@@ -27,14 +27,10 @@ const Stack = createStackNavigator();
 
 const App = () /*=> React$Node = ()*/ => {
   const WelcomeScreen = ({navigation}) => {
-    return (
-      <Welcome_Screen />
-    );
+    return <Welcome_Screen />;
   };
   const LoginScreen = () => {
-    return (
-      <Login_Module />
-    );
+    return <Login_Module />;
   };
 
   return (
@@ -61,12 +57,10 @@ const appColors = {
   titleDark: '#2E3652',
   titleBright: '#F5F7FF',
   bleach: '#FFFFFF',
-  blueAccent: '#466EC3'
+  blueAccent: '#466EC3',
 };
 
-const loginStyles = StyleSheet.create({
-    
-})
+const loginStyles = StyleSheet.create({});
 
 const styles = StyleSheet.create({
   mainContainer: {
