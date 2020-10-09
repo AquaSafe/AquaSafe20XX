@@ -6,13 +6,13 @@
  * @flow strict
  */
 import 'react-native-gesture-handler';
-import React, {useRef, useEffect} from 'react';
+import React, {useRef} from 'react';
 import {
-  SafeAreaView,
+  Animated,
+  StatusBar,
   StyleSheet,
-  ScrollView,
-  View,
   Text,
+
   StatusBar,
   Animated,
   Button,
