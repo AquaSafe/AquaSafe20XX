@@ -9,12 +9,9 @@ import 'react-native-gesture-handler';
 import React, {useRef} from 'react';
 import {
   Animated,
-  StatusBar,
   StyleSheet,
   Text,
-
   StatusBar,
-  Animated,
   Button,
   TouchableOpacity,
   Alert,

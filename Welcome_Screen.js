@@ -106,6 +106,7 @@ const Welcome_Screen = () => {
                 //position: 'absolute',
                 width: '70%',
                 height: '33%',
+                resizeMode: 'contain',
                 marginBottom: -250,
                 opacity: fadeAnim,
               }}
