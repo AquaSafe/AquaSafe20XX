@@ -92,7 +92,9 @@ const Login_Module = () => {
     const [secure, setSecure] = useState(false)
 
     return (
+        // main container
         <View style={styles.screenSpace}>
+            {/* background */}
             <ImageBackground style={styles.image} source={require('./assets/wallpp.png')}>
                 <View style={styles.container}>
                 </View>
@@ -102,7 +104,7 @@ const Login_Module = () => {
             </ImageBackground>
 
             
-
+            {/* field icons */}
             <View style={{
                 width: '80%',
                 height: '80%',
@@ -129,7 +131,8 @@ const Login_Module = () => {
                     </Image>
                 </View>
             </View>
-
+            
+            {/* title */}
             <View style={{
                 width: '100%',
                 height: '80%',
@@ -140,6 +143,7 @@ const Login_Module = () => {
                 <Text style={[styles.text, {marginBottom: '80%', color: appColors.bleach, fontSize: 50}]}>User Login</Text>
             </View>
 
+            {/* Back button */}
             <View style={{
                 width: '90%',
                 height: '100%',
@@ -156,7 +160,8 @@ const Login_Module = () => {
                     </Image>
                 </TouchableOpacity> 
             </View>
-
+            
+            {/* Input fields */}
             <View style={{
                 width: '100%',
                 height: '80%',
@@ -167,6 +172,7 @@ const Login_Module = () => {
                 <View style={[styles.textField, {width: '80%', height: 60, opacity: .1, justifyContent: 'flex-start', flexDirection: 'row-reverse', position: 'absolute', top: '38%'}]}>
                 </View>
                 <View style={[styles.textField, {width: '80%', height: 60, opacity: .1, top: '7.8%'}]}></View>
+                {/* Email */}
                 <TextInput 
                         style={{start: '28%', right: '2%', width: '60%', fontSize: 25, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 10, opacity: 1, position: 'absolute', top: '40%', color: appColors.bleach, flexDirection: 'row-reverse'}} 
                         onChangeText={text => eonChangeText(text)} 
@@ -174,6 +180,7 @@ const Login_Module = () => {
                         editable={true}
                         clearTextOnFocus={true}
                     />
+                {/* Password */}
                 <TextInput 
                         style={{start: '28%', right: '2%', width: '60%', fontSize: 25, alignItems: 'flex-end', justifyContent: 'flex-end', marginRight: 10, opacity: 1, position: 'absolute', top: '55.5%', color: appColors.bleach, flexDirection: 'row-reverse'}} 
                         onChangeText={text => ponChangeText(text)} 
@@ -184,7 +191,8 @@ const Login_Module = () => {
                         onFocus={() => {setSecure(true)}}
                     />
             </View>
-
+            
+            {/* Login button */}
             <View style={{
                 position: 'absolute',
                 justifyContent: 'flex-start',
