@@ -6,19 +6,8 @@
  * @flow strict
  */
 import 'react-native-gesture-handler';
-import React, {useRef} from 'react';
-import {
-  Animated,
-  StatusBar,
-  StyleSheet,
-  Text,
-
-  StatusBar,
-  Animated,
-  Button,
-  TouchableOpacity,
-  Alert,
-} from 'react-native';
+import React from 'react';
+import {StyleSheet} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -30,14 +19,10 @@ const Stack = createStackNavigator();
 
 const App = () /*=> React$Node = ()*/ => {
   const WelcomeScreen = ({navigation}) => {
-    return (
-      <Welcome_Screen />
-    );
+    return <Welcome_Screen />;
   };
   const LoginScreen = () => {
-    return (
-      <Login_Module />
-    );
+    return <Login_Module />;
   };
 
   return (
@@ -64,12 +49,10 @@ const appColors = {
   titleDark: '#2E3652',
   titleBright: '#F5F7FF',
   bleach: '#FFFFFF',
-  blueAccent: '#466EC3'
+  blueAccent: '#466EC3',
 };
 
-const loginStyles = StyleSheet.create({
-    
-})
+const loginStyles = StyleSheet.create({});
 
 const styles = StyleSheet.create({
   mainContainer: {
