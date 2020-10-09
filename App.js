@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  *
  * @format
- * @flow strict-local
+ * @flow strict
  */
 import 'react-native-gesture-handler';
 import React, {useRef, useEffect} from 'react';
@@ -23,86 +23,20 @@ import {
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
+import Login_Module from './Login_Module';
+import Welcome_Screen from './Welcome_Screen';
+//CODE///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const Stack = createStackNavigator();
 
 const App = () /*=> React$Node = ()*/ => {
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-  const fadeText = useRef(new Animated.Value(0)).current;
-
-  Animated.timing(
-    //main background
-    fadeAnim,
-    {
-      toValue: 1,
-      delay: 500,
-      duration: 1800,
-      useNativeDriver: true,
-    },
-  ).start();
-
-  Animated.timing(
-    //text and buttons
-    fadeText,
-    {
-      toValue: 1,
-      delay: 2450,
-      duration: 800,
-      useNativeDriver: true,
-    },
-  ).start();
-
   const WelcomeScreen = ({navigation}) => {
     return (
-      <>
-        <StatusBar barStyle="dark-content" />
-        <View style={styles.mainContainer}>
-          <View style={styles.background}>
-            <Animated.Image
-              source={require('./assets/Aqusafehome.png')}
-              style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                opacity: fadeAnim,
-              }}
-            />
-            <Animated.Text
-              style={{
-                fontSize: 60,
-                fontWeight: '700',
-                paddingTop: 300,
-                color: appColors.bleach,
-                textShadowColor: appColors.darkAccent,
-                textShadowOffset: {width: 5, height: 3},
-                textShadowRadius: 0,
-                opacity: fadeText,
-              }}>
-              AquaSafe
-            </Animated.Text>
-          </View>
-          <View style={styles.textBlock}>
-            <Animated.View
-              style={{
-                opacity: fadeText,
-                paddingTop: 600,
-              }}>
-              <TouchableOpacity
-                style={styles.buttonBlock}
-                onPress={() => navigation.navigate('Registration')}>
-                <Text style={styles.textBlock}>Sign in</Text>
-              </TouchableOpacity>
-            </Animated.View>
-          </View>
-        </View>
-      </>
+      <Welcome_Screen />
     );
   };
-
   const LoginScreen = () => {
     return (
-      <Text>
-        This stack is still being developed. Login is currently disabled
-      </Text>
+      <Login_Module />
     );
   };
 
@@ -117,7 +51,7 @@ const App = () /*=> React$Node = ()*/ => {
         <Stack.Screen //sign in/up
           name="Registration"
           component={LoginScreen}
-          options={{title: 'Login or Register'}}
+          options={{title: 'Login or Register', headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -130,7 +64,12 @@ const appColors = {
   titleDark: '#2E3652',
   titleBright: '#F5F7FF',
   bleach: '#FFFFFF',
+  blueAccent: '#466EC3'
 };
+
+const loginStyles = StyleSheet.create({
+    
+})
 
 const styles = StyleSheet.create({
   mainContainer: {
