@@ -1,3 +1,6 @@
 {
-  "name": "AquaSafe20XX"
+  "name": "AquaSafe20XX",
+  "android": {
+    "package": "tech.nicolor.aquasafe"
+  }
 }
