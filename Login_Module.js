@@ -112,7 +112,7 @@ const Login_Module = () => {
                 alignItems: 'flex-start',
                 position: 'absolute',
             }}>
-                <View style={[styles.textField, {width: '21%', height: 70, borderRadius: 10000, alignItems: 'center', justifyContent: 'center', position: 'absolute', top: '37.5%'}]}>
+                <View style={[styles.textField, {width: '21%', height: 70, borderRadius: 10000, alignItems: 'center', justifyContent: 'center', position: 'absolute', top: '37.2%'}]}>
                     <Image source={require('./assets/mail-512-dark.png')} style={{
                         width: '50%',
                         height: '50%',
@@ -121,7 +121,7 @@ const Login_Module = () => {
                     }}>
                     </Image>
                 </View>
-                <View style={[styles.textField, {width: '21%', height: 70, borderRadius: 10000, marginTop: 40, top: '5.1%'}]}>
+                <View style={[styles.textField, {width: '21%', height: 70, borderRadius: 10000, marginTop: 40, top: '5%'}]}>
                     <Image source={require('./assets/passlock-dark.png')} style={{
                         width: '50%',
                         height: '50%',
